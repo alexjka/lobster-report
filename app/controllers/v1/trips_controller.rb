@@ -5,6 +5,12 @@ class V1::TripsController < ApplicationController
     render json: @trips, status: :ok
   end
 
+  def show
+    @trip = Trip.find(params[:id])
+
+    render json: @trip
+  end
+
   def create
     @trip = Trip.new (trip_params)
 
