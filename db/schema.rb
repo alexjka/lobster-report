@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605000126) do
+ActiveRecord::Schema.define(version: 20170606211737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lobsters_and_trips", force: :cascade do |t|
-    t.string   "trip_result"
-    t.string   "trip_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "trips", force: :cascade do |t|
+    t.string   "result"
+    t.string   "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
